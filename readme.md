@@ -1,6 +1,6 @@
 # My Blawg: JS Selectors Practice
 
-Open the included `index.html` in your browser. 
+Open the included `index.html` in your browser.
 
 # Part One: Vanilla JS
 
@@ -14,18 +14,38 @@ Write down how you would select the following DOM objects on "My Blawg". Use onl
 ---
 
 1. The first `<a>` element on the page
+
+document.querySelector("a")
+
 - All `<a>` elements on the page
+
+document.querySelectorAll("a")
+
 - Using its ID, the `<h1>` at the top of the page
+
+document.getElementById("logo")
+
 - All elements with class `post`
+
+document.querySelectorAll(".post")
+
 - The first element with class `post`
+
+document.querySelector(".post")
+
 - The second element with class `post`
+
+document.querySelectorAll(".post:nth-child(2)")
+
 - The HTML content of the first `<p>` element on the page
+
+document.querySelector("p").innterHTML
 
 # Part Two: jQuery
 
 First, use a `<script>` tag in `index.html` to include the minified jQuery file in the `js` folder.
 
-Then, write down how you would select the following DOM objects on "My Blawg". Use only the following methods or attributes: 
+Then, write down how you would select the following DOM objects on "My Blawg". Use only the following methods or attributes:
 
 - `$`
 - `eq`
@@ -34,16 +54,41 @@ Then, write down how you would select the following DOM objects on "My Blawg". U
 ---
 
 1. All `<a>` elements on the page
+
+$("a")
+
 - The first `<a>` element on the page
+
+$("a").eq(0)
+
 - Using an ID, the `<h1>` at the top of the page
+
+$("#logo")
+
 - All elements with class `post`
+
+$(".post")
+
 - The first element with class `post`
+
+$(".post").eq(0)
+
 - The second element with class `post`
+
+$(".post").eq(1)
+
 - The HTML content of the first `<a>` element on the page
+
+$("a").eq(0).html
 
 Bonus:
 - Using a CSS pseudo-selector, the third element with class `post`
+
+$(".post:nth-child(3)")
+
 - Using one of its HTML attributes, the fourth `<img>` on the page
+
+$("[alt = baloons]")
 
 # Part Three: Getting and Setting
 
@@ -56,10 +101,22 @@ Using these jQuery methods or attributes, follow the instructions below:
 - `prop`
 
 Things to consider:
-- What's the difference between `$("body").html()` and `$("body").html("hello")`? 
+- What's the difference between `$("body").html()` and `$("body").html("hello")`?
+
+The first one is getting the value of html in body and the other is setting the html to hello
+
 - `$("p")` selects all `<p>` elements on the page.
+
+true
+
   - If you run `$("p").html()`, how many elements' HTML does it return?
+
+1
+
   - If you run `$("p").html('hello')`, how many elements does it affect?
+
+5
+
   - What about the other methods?
 
 ---
@@ -70,4 +127,3 @@ Things to consider:
 - Set the background color of the body to "burlywood"
 - Get the `alt` value of the fourth `<img>` on the page
 - Set the `alt` value of the fourth `<img>` on the page to "Why is my boat upside down?"
-
