@@ -14,12 +14,26 @@ Write down how you would select the following DOM objects on "My Blawg". Use onl
 ---
 
 1. The first `<a>` element on the page
+document.querySelector("a");
+
 - All `<a>` elements on the page
+document.querySelectorAll("a");
+
 - Using its ID, the `<h1>` at the top of the page
+docuent.getElementById("logo");
+
 - All elements with class `post`
+document.querySelector(".post");
+
 - The first element with class `post`
+document.querySelector(".post");
+
 - The second element with class `post`
+document.querySelectorAll(".post:nth-child(2)")
+
 - The HTML content of the first `<p>` element on the page
+document.querySelector("p").innerHTML();
+
 
 # Part Two: jQuery
 
@@ -35,6 +49,8 @@ Then, write down how you would select the following DOM objects on "My Blawg". U
 
 1. All `<a>` elements on the page
 - The first `<a>` element on the page
+document.querySelectorAll("a")
+
 - Using an ID, the `<h1>` at the top of the page
 - All elements with class `post`
 - The first element with class `post`
